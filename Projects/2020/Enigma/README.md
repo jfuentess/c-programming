@@ -14,6 +14,10 @@ proyecto nos enfocaremos en una versión simplificada de la máquina. Esta versi
 
 La Figura 1 muestra la encriptación del mensaje "*HOLA*", además de detallar la configuración de los 3 rotores y el reflector. La Figura 1a muestra el caso de la letra “H”: La letra H entra al panel de entrada, el cual conecta con el rotor 1. El rotor 1 mapea H a P. Luego, utilizando el rotor 2, mapeamos P a C, para continuar con el mapeo de C a M en el rotor 3. Una vez llegados al rotor 3, se utiliza el reflector, en el cual se mapea la letra M a la letra O, iniciando el retorno a través de los rotores 3, 2 y 1 (en ese orden). Utilizando el rotor 3, se mapea la letra O a la letra M, luego el rotor 2 mapea M a O, para finalmente mapear O a Z en el rotor 1. De esta manera, la letra H será encriptada como Z. 
 
+| ![Encriptación HOLA](img/enigma1.png) |
+|:--:|
+| <b>Figura 1.</b> Encriptación de la palabra "HOLA".|
+
 Un paso muy importante ocurre luego de encriptar una letra: Cada vez que una letra es encriptada, el rotor 3 gira una vez, cambiando su permutación. Una vez que el rotor 3 ha girado 26 veces, el rotor 2 gira una vez. De igual manera, luego que el rotor 2 gire 26 veces, el rotor 1 girará una vez. (Nota: este mismo efecto se puede apreciar en el contador de kilometraje de los automóviles). Por ejemplo, luego de encriptar la letra H (Figura 1a), el rotor 3 giró una vez, como puede apreciarse en la Figura 1b. Siguiendo este procedimiento, podemos encriptar las letras O, L y A como A, X y P (ver Figuras 1b, 1c y 1d). De esta manera, la palabra "*HOLA*" será encriptada como "*ZAXP*".
 
 Nótese que la posición de los rotores en la Figura 1a es diferente a la posición de los rotores en la Figura 1d, ya que hemos encriptado 4 letras.
@@ -21,6 +25,10 @@ Nótese que la posición de los rotores en la Figura 1a es diferente a la posici
 La máquina enigma sigue un procedimiento simétrico para desencriptar mensajes. Como condición para iniciar el procedimiento de desencriptación, la posición de los rotores debe estar en la misma de cuando el mensaje fue encriptado. Podemos ver el procedimiento de desencriptación de la palabra "ZAXP" en la Figura 2. Notar que la posición inicial de los rotores en la Figura 2 es la misma posición de los rotores en la Figura 1. Esta condición es obligatoria para que la desencriptación sea exitosa. Una vez la posición inicial de los rotores es establecida, procedemos a desencriptar "ZAXP", siguiendo el mismo procedimiento de encriptación de la Figura 1. La Figura 2a muestra cómo la letra "Z" es mapeada a la letra "H". De manera similar, las Figuras 2b, 2c y 2d muestran el mapeo de "A", "X" y "P" a "O", "L", y "A". Así, sabemos que el mensaje cifrado "ZAXP" corresponde al mensaje original "HOLA".
 
 Vale la pena mencionar que el giro de los rotores aumenta la seguridad de la máquina, ya que dos letras iguales y consecutivas nunca serán encriptadas con la misma letra. Por ejemplo, tomando la posición inicial de los rotores en la Figura 1a, la palabra "AAA" será encriptada como "UOH".
+
+| ![Desencriptación ZAXP](img/enigma2.png) |
+|:--:|
+| <b>Figura 2.</b> Desencriptación de la palabra "ZAXP".|
 
 En resumen, para este proyecto se pide simular el funcionamiento de una máquina Enigma utilizando el lenguaje de programación C. En el desarrollo de su proyecto considere los siguientes detalles:
 
