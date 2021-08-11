@@ -43,7 +43,7 @@ En resumen, para este proyecto se pide simular el funcionamiento de una máquina
 
 
 ## Solución propuesta
-- Autor   : Vicente Cser <vcser2018@udec.cl>          
+- Autor   : Vicente Cser (vcser2018@udec.cl)          
 - Archivos : main.c y components.h
 - Compilación: 
  ```
