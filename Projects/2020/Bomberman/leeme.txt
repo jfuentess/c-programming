@@ -1,0 +1,13 @@
+compilar con make
+
+dependencias:
+SDL2
+SDL2_image
+SDL2_ttf
+SDL2_mixer
+
+controles:
+flechas de direccion para moverse
+z para poner bombas
+x para esperar un turno
+esc para salir del juego
