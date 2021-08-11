@@ -40,3 +40,16 @@ En resumen, para este proyecto se pide simular el funcionamiento de una máquina
 6. Documentación: El código debe estar debidamente comentado. Cada sección del código debe contener comentarios que expliquen lo que hace. Sea lo más completo posible.
 7. El proyecto se realizará de manera individual. Ante la existencia de dos o más proyectos idénticos, todos los proyectos involucrados serán calificados con NCR.
 8. Es posible utilizar recursos de la Web. Si se utiliza código fuente de terceros, se debe referenciar de manera adecuada, dando crédito al/la autor/a. Se puede utilizar códigos de terceros en hasta un 30% del código final del proyecto. Porcentajes mayores pueden ser considerados plagio.
+
+
+## Solución propuesta
+- Autor   : Vicente Cser <vcser2018@udec.cl>          
+- Archivos : main.c y components.h
+- Compilación: 
+ ```
+gcc -o enigma main.c
+ ```
+- Ejecución  : 
+ ```
+./enigma <archivo entrada> <archivo salida>
+ ```
