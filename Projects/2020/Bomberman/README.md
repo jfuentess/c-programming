@@ -46,7 +46,7 @@ de cada tipo y su cantidad quedan a criterio de cada grupo.
 
 ## Versión 3: Versión 2 + Interfaz gráfica
 
-Para esta versión, se pide implementar la versión 2 con una interfaz gráfica más atractiva utilizando la [bibliteca SDL](https://www.libsdl.org/).
+Para esta versión, se pide implementar la versión 2 con una interfaz gráfica más atractiva utilizando la [biblioteca SDL](https://www.libsdl.org/).
 
 ### Consideraciones finales
 
