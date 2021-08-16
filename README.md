@@ -1,2 +1,15 @@
 # Programación en C
 Este repositorio contiene código utilizado y desarrollado en el curso "Programación I" de la carrera Ingeniería Civil Informática de la Universidad de Concepción.
+
+El contenido está organizado en las siguientes carpetas:
+
+### Proyectos
+Contiene todos los proyectos desarrollados en el curso a partir del año 2020. Por cada proyecto, se presenta su descripción y una solución propuesta desarrollada por algunos alumnos del curso.
+
+### Código
+Contiene código utilizado en las clases para explicar conceptos básicos y avanzados de la programación en C.
+
+--- 
+
+#### Contacto
+Para cualquier consulta sobre los materiales utilizados, errores en los códigos o propuestas de mejoras, escribir a `jfuentess@inf.udec.cl`.
