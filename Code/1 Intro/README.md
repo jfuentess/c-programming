@@ -1,8 +1,10 @@
-# Introducción a la programación con C
+# Introducción a la programación en C
 
 Esta carpeta contiene programas sencillos que sirven como ejemplos para las
 clases introductorias del curso. Está compuesta por los siguientes archivos y
 carpetas:
+
+### Tipos de datos y variables
 
  - `primer_programa.c`: Primer programa en C.
 
@@ -27,3 +29,7 @@ carpetas:
 
  - `img/`: Carpeta con ejemplos de imágenes resultantes de la ejecución del
    programa Mandelbrot.c.	
+   
+---
+
+### Condicionales y ciclos
