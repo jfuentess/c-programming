@@ -8,11 +8,11 @@ mandelbrot: mandelbrot.c
 
 c2k: celsius2Kelvin.c
 	@echo "[BLD] Compilando celsius2Kelvin.c"
-	@$(MY_C) -o c2k mandelbrot.c
+	@$(MY_C) -o c2k celsius2Kelvin.c
 
 ec: elemento_central.c
 	@echo "[BLD] Compilando elemento_central.c"
-	@$(MY_C) -o ec mandelbrot.c
+	@$(MY_C) -o ec elemento_central.c
 
 lim: limites.c
 	@echo "[BLD] Compilando limites.c"
