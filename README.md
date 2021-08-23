@@ -9,6 +9,11 @@ Contiene todos los proyectos desarrollados en el curso a partir del año 2020. P
 ### Código
 Contiene código utilizado en las clases para explicar conceptos básicos y avanzados de la programación en C.
 
+### Slides
+Colección de archivos PDF utilizados como material de apoyo para las
+clases. Cada archivo contiene referencias a los programas disponibles en la
+carpeta `Código`.
+
 --- 
 
 #### Contacto
