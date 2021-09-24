@@ -23,6 +23,12 @@ archivos y carpetas:
  - `arreglos/arreglo_insercion.c`: Implementación de la inserción de un nuevo
    elemento en un arreglo.
 
+ - `arreglos/patrones.c`: Búsqueda de un patrón en un texto usando arreglos de caracteres.
+
+ - `arreglos/permutaciones.c`: Búsqueda de todos los ciclos de una permutación
+
+ - `arreglos/batalla.c`: Resolución del problema 1991 de la plataforma Timus
+
 
 ---
 
@@ -36,6 +42,7 @@ archivos y carpetas:
   - `matrices/imagen_rgb.c`: Conversión de matrices R(ed), G(reen), B(lue) a una
      imagen en formato PNG. La implementción utiliza la función `svpng()` almacenada en el archivo `arreglos/svpng.inc`.
   - `matrices/escala_grises.c`: Conversión a escala de grises de una imagen RGB.
+  - `matrices/propagacion.c`: Propagación de valores en una matriz de 2 dimensiones. Los valores son visualizados como una imagen RGB.
   - `matrices/matrices.h`: Declaración de matrices en 2 dimensiones. Las
       matrices corresponden a matrices RGB del personaje principal de Súper Mario.
   - `matrices/svpng.inc`: Implementación de una función para almacenar imágenes
