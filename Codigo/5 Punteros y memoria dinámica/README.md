@@ -23,7 +23,6 @@ archivos y carpetas:
  - `Memoria dinámica/memoria_dinamica.c`: Reserva de memoria en el heap para un arreglo de n enteros.
  - `Memoria dinámica/matriz_malloc.c`: Reserva de memoria en el heap para una matriz
  - `Memoria dinámica/arreglo_strings.c`: Almacenamiento de un conjunto de frases usando memoria dinámica.
- - `Memoria dinámica/calloc_realloc.c`: Ejemplo del uso de las funciones `calloc`
- - y `realloc`.
+ - `Memoria dinámica/calloc_realloc.c`: Ejemplo del uso de las funciones `calloc` y `realloc`.
  - `Memoria dinámica/errores_comunes.c`: Dos errores comunes al utilizar memoria dinámica.
  - `Memoria dinámica/arreglo2archivo.c`: Ejemplo de escritura/lectura de un arreglo a un archivo binario.
