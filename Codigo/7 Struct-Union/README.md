@@ -19,3 +19,11 @@ archivos:
  - `tienda_juegos.c`: Implementación de una tienda de video juegos usando
     estructuras, junto con funciones para agregar y eliminar nuevos juegos,
     además de ingresar nuevas compras.
+ - `enum.c`: Ejemplo del uso de una enumeración de constantes.
+ - `union.c`: Ejemplo del uso de una unión de variables.
+ - `cmp_union_struct.c`: Comparación del tamaño de una `union` y una `struct`
+ - `lista_simple.c`: Implementación de una lista simple, sin funciones
+ - `lista_completa.c`: Implementación de una lista simple con funciones de
+    inserción, eliminación e impresión.
+ - `lista_doble.c`: Implementación de una lista doblemente ligada, con funciones
+    de inserción, eliminación e impresión.
