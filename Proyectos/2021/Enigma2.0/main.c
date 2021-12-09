@@ -2,7 +2,7 @@
  ***   Proyecto: Mejorando la seguridad de la Máquina Enigma   
  ***   Año     : 2021                                        
  ***   Autor   : Yulissa Sanhueza <ysanhueza2019@udec.cl>        
- ***   Archivo : funciones.h
+ ***   Archivo : main.c
  ***
  ***   Compilación: gcc -o enigma main.c
  ***   Ejecución  : ./enigma <numero de rotores> <nombre de los archivos de cada rotor> <archivo reflector> <archivo entrada> <archivo salida>
