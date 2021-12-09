@@ -85,8 +85,6 @@ gcc -o enigma main.c
 
 | ![Screenshot ejecución modo archivo](img/Screenshot1.png) |
 |:--:|
-| Screenshot ejecución modo archivo.|
-|:--:|
+| **Screenshot ejecución modo archivo**|
 | ![Screenshot ejecución modo online](img/Screenshot2.png) |
-|:--:|
-| Screenshot ejecución modo online.|
+| **Screenshot ejecución modo online**|
