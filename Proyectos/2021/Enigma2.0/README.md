@@ -9,7 +9,7 @@ el mensaje original. Los sistemas de encriptación son utilizados para mejorar l
 seguridad en la transmisión de mensajes, transacciones, etc, como es el caso de
 los mensajes enviados por Whatsapp.
 
-En el siguiente enlace: [link a enigma](..../2020/Enigma), está la
+En el siguiente enlace: [link a enigma](../../2020/Enigma), está la
 implementación de una máquina enigma simplificada, la cual fue desarrollada el
 año pasado como el primer proyecto de este mismo curso. La implementación
 provista está compuesta por los siguientes componentes: 
