@@ -82,3 +82,11 @@ gcc -o enigma main.c
  ```
 ./enigma 5 rotor1.txt rotor2.txt rotor3.txt rotor4.txt rotor5.txt reflector.txt entrada.txt salida.txt
  ```
+
+| ![Screenshot ejecución modo archivo](img/Screenshot1.png) |
+|:--:|
+| Screenshot ejecución modo archivo.|
+|:--:|
+| ![Screenshot ejecución modo online](img/Screenshot2.png) |
+|:--:|
+| Screenshot ejecución modo online.|
