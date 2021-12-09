@@ -1,3 +1,10 @@
+/*****************************************************************
+ ***   Proyecto: Mejorando la seguridad de la Máquina Enigma   
+ ***   Año     : 2021                                        
+ ***   Autor   : Yulissa Sanhueza <ysanhueza2019@udec.cl>        
+ ***   Archivo : variables.h
+ *****************************************************************/
+
 #ifndef variables
 #define variables
 
