@@ -1,5 +1,6 @@
-# Programación en C
-Este repositorio contiene código utilizado y desarrollado en el curso "Programación I" de la carrera Ingeniería Civil Informática de la Universidad de Concepción.
+# Programación de Computadores
+Este repositorio contiene código utilizado y desarrollado en el curso
+"Programación de Computadores" (previo "Programación I") de la carrera Ingeniería Civil Informática de la Universidad de Concepción.
 
 El contenido está organizado en las siguientes carpetas:
 
