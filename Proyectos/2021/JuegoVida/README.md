@@ -39,7 +39,7 @@ Para este proyecto se pide implementar el juego de la vida usando todo lo que ha
 
 ## Solución propuesta
 - Autor   : Pablo López (pablopez2019@udec.cl), Vicente Ríos (vrios2020@udec.cl) y Yulissa Sanhueza (ysanhueza2019@udec.cl)          
-- Archivos : main.c, funciones.h y variables.h
+- Carpetas : src, img, audio y utils
 - Compilación: 
  ```
 make
