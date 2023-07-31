@@ -1,90 +1,59 @@
-# Mejorando la seguridad de la Máquina Enigma
+# El juego de la vida
 
-En el primer proyecto del curso continuaremos con la implementación de la
-Máquina Enigma, desarrollada durante la versión 2020 del mismo curso. La máquina
-enigma implementa un sistema de encriptación de mensajes, el cual permite
-ocultar la información contenida en un mensaje, de tal manera que no puede ser
-entendido por quien no conoce el mecanismo para revertir el proceso, recuperando
-el mensaje original. Los sistemas de encriptación son utilizados para mejorar la
-seguridad en la transmisión de mensajes, transacciones, etc, como es el caso de
-los mensajes enviados por Whatsapp.
+El juego de la vida es quizás uno de los ejemplos mejor conocidos de autómatas celulares. Propuesto por el matemático John Conway, el juego de la vida ha sido objeto de numerosos estudios y existen múltiples versiones de él. En este proyecto, nos enfocaremos en una de esas versiones.
 
-En el siguiente enlace: [link a enigma](../../2020/Enigma), está la
-implementación de una máquina enigma simplificada, la cual fue desarrollada el
-año pasado como el primer proyecto de este mismo curso. La implementación
-provista está compuesta por los siguientes componentes: 
-
-- **Panel de entrada**: Es el componente de entrada a la máquina, el cual captura la letra que queremos encriptar. Este componente también es utilizado como salida del proceso de encriptación.
-- **Rotores**: La máquina consta de 3 rotores. En el diseño original de la máquina Enigma, cada rotor era un disco con dos caras y con 26 contactos eléctricos, uno por cada letra del alfabeto. Podemos entender un rotor como una permutación del alfabeto de 26 letras. De esta manera, cada letra será mapeada a una letra distinta. Los rotores tienen la cualidad de girar cada vez que son utilizados, de tal manera que cada vez se obtiene una nueva permutación de letras.
-- **Reflector**: Como componente final, la máquina añade un reflector, el cual puede ser entendido como un rotor fijo (que no gira), y que tiene el objetivo de evitar que una letra sea mapeada a si misma. El reflector consta de 13 pares de letras. Por ejemplo, el par (A,Z) indica que la letra A será mapeada a la letra Z y viceversa.
-
-Para más detalles de la implementación, revisar el enlace anterior. Para quienes
-quieran saber más sobre la historia y funcionamiento de las máquinas Enigma, les
-recomiendo el siguiente [video (con subtítulos)](https://www.youtube.com/watch?v=G2_Q9FoD-oQ&feature=emb_logo) y
-[animación](https://observablehq.com/@tmcw/enigma-machine).
-
-En este nuevo proyecto nos enfocaremos en aumentar la seguridad de la
-implementación actual. Para ello, consideraremos los siguientes puntos: 
-
-1. En la implementación actual la configuración (o permutación inicial) de los 3
-rotores es fija. Por ejemplo, en la Figura 1a del enlace (Enlaces a un sitio
-externo.), la letra A siempre será mapeada a la letra B en el primer rotor, a la
-letra A para el segundo rotor y a la letra E en el tercer rotor. Esto genera un
-problema de seguridad, ya que si queremos que nuestro mensaje encriptado sea
-seguro, entonces la configuración de los rotores también debe ser secreta. 
-2. En la versión original de la máquina enigma, se debían elegir 3 rotores entre
-5 rotores disponibles, cada uno con una configuración o cableado fijo. Hay una
-relación directa entre la cantidad de rotores y la seguridad de la
-máquina. Entre más rotores, mayor es la cantidad de combinaciones que puede
-generar la máquina, por lo que es más difícil obtener la configuración correcta
-para desencriptar los mensajes. De esta manera, ya que la implementación actual
-sólo usa 3 rotores, su seguridad podría aumentar si se usan más rotores. 
-
-De manera concreta, para entre proyecto se piden los siguientes puntos:
-
-A. Por cada rotor utilizado en la máquina, su configuración se debe cargar desde
-un archivo de entrada. En el caso de que para un rotor no se indique ningún
-archivo de entrada, entonces el programa deberá generar la configuración de
-dicho rotor de manera aleatoria (usar función rand( ) ). Nótese que para el
-proceso de desencriptación, la máquina Enigma necesita comenzar con los mismos
-rotores utilizados en el proceso de encriptación. Es por ello que, de generarse
-de manera aleatoria la configuración de un rotor, dicha configuración deberá ser
-almacenada en un archivo para su uso posterior. 
-B. El programa a implementar deberá permitir utilizar entre 3 y 5 rotores. La
-cantidad de rotores se indicará como parámetro al momento de iniciar la
-ejecución del programa. 
-C. En la implementación actual, el mensaje a encriptar está almacenado en un
-archivo de entrada. De esta manera, si usted quiere encriptar un mensaje, deberá
-escribir dicho mensaje en un archivo de texto antes de poder encriptarlo. A esta
-nueva versión se le añadirá un modo de encriptado online. Cada vez que se inicie
-el programa se deberá consultar si se quiere encriptar un mensaje desde un
-archivo (la implementación actual) o se desea entrar en modo online. En el modo
-online, cada vez que se ingresa un nueva letra, automáticamente esa letra será
-encriptada y el resultado mostrado por pantalla. 
+El juego no tiene jugadores. En su lugar, depende de una configuración inicial la cual va evolucionando a medida que pasa el tiempo. El escenario es el siguiente: Tenemos una grilla o matriz de celdas, la cual puede ser de cualquier tamaño (incluso de tamaño infinito). Cada celda representa uno de dos estados: activa o inactiva. De esa manera, una configuración o estado inicial del juego consiste de una matriz de n filas y m columnas, donde todas las celdas están en uno de los dos estados válidos. A partir del estado inicial, se aplican las siguientes reglas: 
 
 
+1. Para que una celda siga activa, tiene que tener 2 o 3 celdas vecinas que también estén activas. Si se tienen más celdas vecinas activas, entonces la celda se desactiva. De manera similar, si se tienen menos de 2 celdas vecinas activas, la celda también se desactiva.
+2. Si una celda inactiva tiene exactamente 3 celdas vecinas activas, entonces esta celda vuelve a activarse.
 
+La siguiente figura muestra un ejemplo de la aplicación de las reglas, donde las celdas activas se muestran en rojos y las inactivas en blanco.
+
+ ![Ejemplo de transiciones](img/ejemplo1.png) 
+
+Es importante notar que las reglas se aplican a todas las celdas a la vez. A modo de analogía, el juego tiene un reloj interno (como el de los computadores), donde en cada nuevo 'tic' se aplican las 2 reglas a todas las celdas.
+
+Según la configuración inicial, se pueden obtener estados estáticos (que no cambian con el paso del tiempo), cíclicos (una serie de patrones que se repiten) o no cíclicos. Las siguientes imágenes muestran ejemplos interesantes de patrones:
+
+ ![Ejemplo de transiciones](img/ejemplo3.gif) 
+ ![Ejemplo de transiciones](img/ejemplo4.gif) 
+
+Adicionalmente, el [siguiente video](https://www.youtube.com/watch?v=OWXD_wJxCKQ) explica las reglas.
+
+Para este proyecto se pide implementar el juego de la vida usando todo lo que han aprendido en el curso. A continuación se describe el detalle de lo solicitado:
+
+- **Implementación base**: Se pide implementar una versión base, la cual implementa las reglas básicas del juego y genera la configuración inicial de manera aleatoria. En esta implementación base se pide una interfaz de visualización sencilla, utilizando impresiones por pantalla para mostrar la evolución del juego y la cantidad de pasos (o 'tic's) que se han ejecutado.
+- **Extensión 1**: La implementación base se puede extender con al menos 4 las siguientes funcionalidades:
+  * Cargar la configuración o estado inicial a partir desde un archivo
+  * Guardar la configuración o estado actual a un archivo
+  * Pausar el juego luego de presionar la tecla 'P'
+  * Insertar nuevos patrones al azar durante la ejecución al presionar la tecla 'M'. Para esta funcionalidad se puede tener predefinidos algunos patrones de antemano (por ejemplo, patrones en L, patrones en T, etc).
+  * Visualización de estadísticas, como porcentaje de casillas activas vs inactivas, cantidad de celdas que han cambiado su estado respecto a la configuración anterior, etc.
+  * Detener la ejecución cuando ya no hay cambio entre configuraciones o estados consecutivos (se alcanzó un estado estático)
+  * Alguna otra funcionalidad que puedan proponer los alumnos. Se evaluará la complejidad de la funcionalidad propuesta. En caso de ser muy simple, podría no ser considerada.
+- **Extensión 2**: Mejorar la interfaz de visualización por medio del uso de la biblioteca SDL.
+- **Extensión 3**: Implementar una variante *El juego de la vida, versión arcoiris*. Esta variante suma a las 2 reglas básicas el uso de colores. Inicialmente, las casillas activas pueden tener colores al azar. Luego, si una casilla inactiva es activada por medio de las reglas básicas, el color de esa casilla será el color promedio de sus 3 vecinos activos. Para calcular el color promedio use colores en RGB. De esa manera, basta con calcular el promedio en la banda de los rojos, el promedio de la banda de los verdes y la banda de los azules. Las siguientes figuras muestran un ejemplo de la nueva variante. 
+
+ ![Ejemplo de transiciones](img/ejemplo2.png) 
 
 ## Solución propuesta
-- Autor   : Yulissa Sanhueza (ysanhueza2019@udec.cl)          
+- Autor   : Pablo López (pablopez2019@udec.cl), Vicente Ríos (vrios2020@udec.cl) y Yulissa Sanhueza (ysanhueza2019@udec.cl)          
 - Archivos : main.c, funciones.h y variables.h
 - Compilación: 
  ```
-gcc -o enigma main.c
+make
  ```
 - Ejemplo ejecución  : 
  ```
-./enigma 3 rotor1.txt rotor2.txt rotor3.txt reflector.txt entrada.txt salida.txt
- ```
- ```
-./enigma 4 rotor1.txt rotor2.txt rotor3.txt rotor4.txt reflector.txt entrada.txt salida.txt
- ```
- ```
-./enigma 5 rotor1.txt rotor2.txt rotor3.txt rotor4.txt rotor5.txt reflector.txt entrada.txt salida.txt
+./juego_vida
  ```
 
 | ![Screenshot ejecución modo archivo](img/Screenshot1.png) |
 |:--:|
-| **Screenshot ejecución modo archivo**|
+| **Imagen de inicio**|
 | ![Screenshot ejecución modo online](img/Screenshot2.png) |
-| **Screenshot ejecución modo online**|
+| **Menú**|
+|:--:|
+| ![Screenshot ejecución modo online](img/Screenshot3.png) |
+| **Screenshot de ejecución**|
