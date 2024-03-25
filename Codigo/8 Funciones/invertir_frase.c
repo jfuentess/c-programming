@@ -6,8 +6,8 @@ void invertir(char frase[]) {
     return;
 
   // ¿Qué pasa si imprimimos antes de la llamada recursiva?
-  invertir(&frase[1]);
   printf("%c", frase[0]);
+  invertir(&frase[1]);
 }
 
 int main(void) {
