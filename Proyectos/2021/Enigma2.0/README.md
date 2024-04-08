@@ -42,7 +42,7 @@ sólo usa 3 rotores, su seguridad podría aumentar si se usan más rotores.
 
 De manera concreta, para entre proyecto se piden los siguientes puntos:
 
-A. Por cada rotor utilizado en la máquina, su configuración se debe cargar desde
+1. Por cada rotor utilizado en la máquina, su configuración se debe cargar desde
 un archivo de entrada. En el caso de que para un rotor no se indique ningún
 archivo de entrada, entonces el programa deberá generar la configuración de
 dicho rotor de manera aleatoria (usar función rand( ) ). Nótese que para el
@@ -50,10 +50,10 @@ proceso de desencriptación, la máquina Enigma necesita comenzar con los mismos
 rotores utilizados en el proceso de encriptación. Es por ello que, de generarse
 de manera aleatoria la configuración de un rotor, dicha configuración deberá ser
 almacenada en un archivo para su uso posterior. 
-B. El programa a implementar deberá permitir utilizar entre 3 y 5 rotores. La
+2. El programa a implementar deberá permitir utilizar entre 3 y 5 rotores. La
 cantidad de rotores se indicará como parámetro al momento de iniciar la
 ejecución del programa. 
-C. En la implementación actual, el mensaje a encriptar está almacenado en un
+3. En la implementación actual, el mensaje a encriptar está almacenado en un
 archivo de entrada. De esta manera, si usted quiere encriptar un mensaje, deberá
 escribir dicho mensaje en un archivo de texto antes de poder encriptarlo. A esta
 nueva versión se le añadirá un modo de encriptado online. Cada vez que se inicie
