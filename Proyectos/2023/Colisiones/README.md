@@ -64,7 +64,7 @@ SDL2, usar colores en los objetos, añadir efectos de sonido, etc
 
 
 ## Solución propuesta
-- Autor   : Chloe Yañez (chyanez2023@udec.cl), Braian Urra (burra2022@udec.cl) y Cristóbal González (cristobagonzalez2023)          
+- Autor   : Chloe Yañez (chyanez2023@udec.cl), Braian Urra (burra2022@udec.cl) y Cristóbal González (cristobagonzalez2023@udec.cl)          
 - Compilación: 
  ```
 make
