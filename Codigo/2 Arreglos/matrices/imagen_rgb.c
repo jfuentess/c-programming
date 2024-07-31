@@ -10,8 +10,8 @@
 #include "svpng.inc"
 
 // Función que sirve para escribir una imagen PNG a partir de 3 matrices RGB
-void escribir_imagen(const char* nb, int f, int c, int R[f][c], int G[f][c],
-		     int B[f][c]) {
+void escribir_imagen(const char* nb, int f, int c, unsigned char R[f][c], unsigned char G[f][c],
+		     unsigned char B[f][c]) {
     unsigned char rgb[f * c * 3], *p = rgb;
     unsigned x, y;
 
@@ -21,9 +21,9 @@ void escribir_imagen(const char* nb, int f, int c, int R[f][c], int G[f][c],
     // Transformamos las 3 matrices en una arreglo unidimensional
     for (y = 0; y < f; y++)
         for (x = 0; x < c; x++) {
-            *p++ = (unsigned char)R[y][x];    /* R */
-            *p++ = (unsigned char)G[y][x];    /* G */
-            *p++ = (unsigned char)B[y][x];    /* B */
+            *p++ = R[y][x];    /* R */
+            *p++ = G[y][x];    /* G */
+            *p++ = B[y][x];    /* B */
         }
     // La función svpng() transforma las 3 matrices RGB en una imagen PNG 
     svpng(fp, c, f, rgb, 0);
@@ -51,9 +51,9 @@ int main() {
 
   int n = 600;
 
-  int rand_R[n][n];
-  int rand_G[n][n];
-  int rand_B[n][n];
+  unsigned char rand_R[n][n];
+  unsigned char rand_G[n][n];
+  unsigned char rand_B[n][n];
   
   for(int i=0; i < n; i++) { // Filas
     for(int j=0; j < n; j++) { // Columnas

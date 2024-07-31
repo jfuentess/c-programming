@@ -14,8 +14,8 @@
 #include "svpng.inc"
 
 // Función que sirve para escribir una imagen PNG a partir de 3 matrices RGB
-void escribir_imagen(const char* nb, int f, int c, int R[f][c], int G[f][c],
-		     int B[f][c]) {
+void escribir_imagen(const char* nb, int f, int c, unsigned char R[f][c], unsigned char G[f][c],
+		     unsigned char B[f][c]) {
     unsigned char rgb[f * c * 3], *p = rgb;
     unsigned x, y;
 
@@ -25,9 +25,9 @@ void escribir_imagen(const char* nb, int f, int c, int R[f][c], int G[f][c],
     // Transformamos las 3 matrices en una arreglo unidimensional
     for (y = 0; y < f; y++)
         for (x = 0; x < c; x++) {
-            *p++ = (unsigned char)R[y][x];    /* R */
-            *p++ = (unsigned char)G[y][x];    /* G */
-            *p++ = (unsigned char)B[y][x];    /* B */
+            *p++ = R[y][x];    /* R */
+            *p++ = G[y][x];    /* G */
+            *p++ = B[y][x];    /* B */
         }
     // La función svpng() transforma las 3 matrices RGB en una imagen PNG 
     svpng(fp, c, f, rgb, 0);
@@ -40,9 +40,9 @@ int main() {
   printf("### Propagación de valores mayores ###\n");
   printf("######################################\n\n");
 
-  int rand_R[322][256];
-  int rand_G[322][256];
-  int rand_B[322][256];
+  unsigned char rand_R[322][256];
+  unsigned char rand_G[322][256];
+  unsigned char rand_B[322][256];
 
   // Imagen mayoritariamente verde
   for(int i=0; i < 322; i++) { // Filas
@@ -104,17 +104,17 @@ int main() {
 
 
   // Utilizamos una imagen RGB de copia para guardar valores temporales
-  int copy_R[322][256];
-  int copy_G[322][256];
-  int copy_B[322][256];
+  unsigned char copy_R[322][256];
+  unsigned char copy_G[322][256];
+  unsigned char copy_B[322][256];
   
 
   while(1) {
     for(int i=0; i<322; i++) { // Filas
       for(int j=0; j<256; j++) { // Columnas
-	int max_R = 0;
-	int max_G = 0;
-	int max_B = 0;
+	unsigned char max_R = 0;
+	unsigned char max_G = 0;
+	unsigned char max_B = 0;
 	
 	// Vecino de arriba
 	if(i-1 >= 0) {
