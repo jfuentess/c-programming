@@ -29,42 +29,42 @@ peso.
 ## Organización del proyecto
 El proyecto constará de tres fases:
 
-1. *Fase 1 - trabajo individual*: Esta primera fase constará de tres tareas (ver el detalle más adelante), donde cada estudiante será asignado/a para realizar una de las tareas. 
-2. *Fase 2 - trabajo grupal*: Una vez finalizado el trabajo individual, se conformarán de manera aleatoria grupos de 3 estudiantes. La formación de grupos asegurará que cada grupo esté conformado por estudiantes que han desarrollado las tres tareas del proyecto. El trabajo grupal consistirá en combinar lo desarrollado de manera individual para tener el primer prototipo del sistema de colisiones.
-3. *Fase 3 - mejora de la fase 2*: En esta última fase los integrantes de los grupos conformados en la fase 2 deberán implementar mejores a lo realizado en dicha fase (ver más adelante las mejoras solicitadas)
+1. **Fase 1 - trabajo individual**: Esta primera fase constará de tres tareas (ver el detalle más adelante), donde cada estudiante será asignado/a para realizar una de las tareas. 
+2. **Fase 2 - trabajo grupal**: Una vez finalizado el trabajo individual, se conformarán de manera aleatoria grupos de 3 estudiantes. La formación de grupos asegurará que cada grupo esté conformado por estudiantes que han desarrollado las tres tareas del proyecto. El trabajo grupal consistirá en combinar lo desarrollado de manera individual para tener el primer prototipo del sistema de colisiones.
+3. **Fase 3 - mejora de la fase 2**: En esta última fase los integrantes de los grupos conformados en la fase 2 deberán implementar mejores a lo realizado en dicha fase (ver más adelante las mejoras solicitadas)
 
 
 Las tres tareas de la primera fase serán las siguientes:
 
-1. *Tarea 1: Lectura de coordenadas*. En esta primera tarea, se deberán leer las
+1. **Tarea 1: Lectura de coordenadas**. En esta primera tarea, se deberán leer las
 coordenadas y direcciones iniciales de los objetos. Estas coordenadas podrán
 venir almacenadas en distintos tipos de archivos, por ejemplo CSV, binario o
 texto.
-2. Tarea 2: Desplazamiento y manejo de colisiones. En esta tarea se debe implementar toda la lógica del manejo de colisiones, descrita previamente. Se pueden añadir nuevas lógicas, siempre y cuando pueda ser justificado. En esta tarea se debe manejar una cantidad arbitraria de puntos.
-3. Tarea 3: Visualización de objetos en movimiento. En esta tarea deberán implementar una interfaz gráfica para visualizar los objetos en la grilla. Para realizarlo podrán utilizar ASCII art, el cual, mezclado con el uso de colores, puede proveer una buena alternativa para visualizar los objetos (ver en la sección de mejoras para más alternativas). Para esta tarea se constará son lo siguiente:
+2. **Tarea 2: Desplazamiento y manejo de colisiones**. En esta tarea se debe implementar toda la lógica del manejo de colisiones, descrita previamente. Se pueden añadir nuevas lógicas, siempre y cuando pueda ser justificado. En esta tarea se debe manejar una cantidad arbitraria de puntos.
+3. **Tarea 3: Visualización de objetos en movimiento**. En esta tarea deberán implementar una interfaz gráfica para visualizar los objetos en la grilla. Para realizarlo podrán utilizar ASCII art, el cual, mezclado con el uso de colores, puede proveer una buena alternativa para visualizar los objetos (ver en la sección de mejoras para más alternativas). Para esta tarea se constará son lo siguiente:
 
 
 ## Mejoras a la implementación base
 Por sobre la implementación base mostrada en el diagrama anterior, se pueden
 implementar los siguientes paquetes de mejora
 
-1. *Paquete 1: Almacenamiento y cambio de estados*. En este paquete de mejoras
+1. **Paquete 1: Almacenamiento y cambio de estados**. En este paquete de mejoras
 se incluyen todas aquellas mejoras que permitan el almacenamiento del estado
 actual de la grilla, así como cambios en su estado. Algunos ejemplos de nuevas
 funcionalidades son: guardar el estado actual de las colisiones o cargar un
 estado desde archivo
-2. *Paquete 2: Mejora en la usabilidad/jugabilidad*. Este paquete de mejoras
+2. **Paquete 2: Mejora en la usabilidad/jugabilidad**. Este paquete de mejoras
 busca hacer más interactivo el sistema de colisiones. Ejemplo de nuevas
 funcionalidades son: añadir nuevos elementos a la grilla, reducir el peso de los
 objetos que colisionan, contador de colisiones, etc.
-3. *Paquete 3: Mejoras en la visualización*. Este paquete de mejoras busca hacer
+3. **Paquete 3: Mejoras en la visualización**. Este paquete de mejoras busca hacer
 más atractiva la interfaz desarrollada. Alguna posibles mejoras son: uso de
 SDL2, usar colores en los objetos, añadir efectos de sonido, etc
-4. *Paquete 4: Mejoras personalizadas*. Este paquete incluye cualquier mejora propuesta por el equipo de trabajo que no haya sido considerada en los paquetes de mejora previos
+4. **Paquete 4: Mejoras personalizadas**. Este paquete incluye cualquier mejora propuesta por el equipo de trabajo que no haya sido considerada en los paquetes de mejora previos
 
 
 ## Solución propuesta
-- Autor   : Chloe Yañez (chyanez2023@udec.cl), Braian Urra (burra2022@udec.cl) y Cristóbal González (cristobagonzalez2023)          
+- Autor   : Chloe Yañez (chyanez2023@udec.cl), Braian Urra (burra2022@udec.cl) y Cristóbal González (cristobagonzalez2023@udec.cl)          
 - Compilación: 
  ```
 make
@@ -85,6 +85,7 @@ Click Izquierdo en pantalla: generar obstáculo segun la posición del mouse (mo
  ```
 
 | ![Screenshot pantalla de inicio](img/img1.png) |
+|:--:|
 | **Pantalla de inicio**|
 | ![Screenshot ejecución modo clásico](img/img2.png) |
 | **Modo clásico**|
