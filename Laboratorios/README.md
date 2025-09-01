@@ -9,8 +9,11 @@ Cada laboratorio incluye:
 
 ## Estructura
 
-- **Laboratorio 1**  
-  Ejercicios introductorios sobre entrada/salida en C.
+- **Laboratorio 1**
+  Introduccion a la entrada/salida en C.
+
+- **Laboratorio 2**
+  Ciclos _while_ , _for_ y arreglos.
 
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
@@ -18,6 +21,6 @@ Cada laboratorio incluye:
 
 **¡No dudes en contactarnos si tienes dudas o sugerencias!**
 
-**Ayudantes**  
-Programación de Computadores  
+**Ayudantes**
+Programación de Computadores
 Universidad de Concepción
