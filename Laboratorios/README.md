@@ -14,6 +14,9 @@ Cada laboratorio incluye:
 
 - **Laboratorio 2**
   Ciclos _while_ , _for_ y arreglos.
+  
+- **Laboratorio 3**
+  Matrices y Biblioteca math.
 
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
