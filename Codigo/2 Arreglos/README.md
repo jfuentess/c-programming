@@ -48,4 +48,4 @@ archivos y carpetas:
   - `matrices/svpng.inc`: Implementación de una función para almacenar imágenes
     RGB en formato uncompressed PNG. La implementación pertenece a Milo Yip y
     puede ser vista en el siguiente [enlace](https://github.com/miloyip/svpng).
-
+  - `matrices/rotar90.c`: Rotar una imagen RGB 90 grados en el sentido de las agujas del reloj.

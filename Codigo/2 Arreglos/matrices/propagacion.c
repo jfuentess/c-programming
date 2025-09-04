@@ -159,8 +159,8 @@ int main() {
     for(int i=0; i<322; i++) { // Filas
       for(int j=0; j<256; j++) { // Columnas
 	rand_R[i][j] = copy_R[i][j];
-	rand_G[i][j] = copy_G[i][j];
-	rand_B[i][j] = copy_B[i][j];
+	//	rand_G[i][j] = copy_G[i][j];
+	//	rand_B[i][j] = copy_B[i][j];
       }
     }
 

@@ -18,21 +18,21 @@ int main() {
   int arr3[10] = {5};
   int arr4[10] = {5, 7, 10, 56, 0, 45, 7, 12, -1, -10};
 
-  printf("1. %d\n", arr4[0]);
-  printf("2. %d\n", arr4[1]);
-  printf("3. %d\n", arr4[2]);
-  printf("4. %d\n", arr4[3]);
-  printf("5. %d\n", arr4[4]);
-  printf("6. %d\n", arr4[5]);
-  printf("7. %d\n", arr4[6]);
-  printf("8. %d\n", arr4[7]);
-  printf("9. %d\n", arr4[8]);
-  printf("10. %d\n", arr4[9]);
-  printf("11. %d [[ Error! ]]\n", arr4[10]);
+  /* printf("1. %d\n", arr4[0]); */
+  /* printf("2. %d\n", arr4[1]); */
+  /* printf("3. %d\n", arr4[2]); */
+  /* printf("4. %d\n", arr4[3]); */
+  /* printf("5. %d\n", arr4[4]); */
+  /* printf("6. %d\n", arr4[5]); */
+  /* printf("7. %d\n", arr4[6]); */
+  /* printf("8. %d\n", arr4[7]); */
+  /* printf("9. %d\n", arr4[8]); */
+  /* printf("10. %d\n", arr4[9]); */
+  /* printf("11. %d [[ Error! ]]\n", arr4[10]); */
   
-  printf("arr4: ");
-  for(int i=0; i <= 10; i++)
-    printf("%d ", arr4[i]);
+  printf("arr1: ");
+  for(int i=0; i < 10; i++)
+    printf("%d ", arr1[i]);
   printf("\n");
 
   return 0;

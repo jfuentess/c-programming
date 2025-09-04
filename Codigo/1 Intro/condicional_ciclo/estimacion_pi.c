@@ -4,7 +4,7 @@
 
 int main() {
   // Cantidad total de puntos
-  int total_puntos = 100000;
+  int total_puntos = 1000000;
   int intervalo = 10000;
 
   // Variables utilizadas para generar puntos (x,y) al azar. En esta

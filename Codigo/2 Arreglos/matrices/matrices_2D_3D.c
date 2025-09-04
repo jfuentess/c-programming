@@ -28,6 +28,12 @@ int main() {
   		       {96, 76, -8, 55},
   		       {72, 3, -5, -6}};
 
+
+  int **P = arr2D_3;
+  printf("%d \n", *(P+2));
+  /* for(int i=0; i < 5; i++) */
+  /*   printf("%d ", arr2D_3[i]); */
+  /* prinft("\n"); */
   
   // Imprimimos una matriz en 2 dimensiones
   printf("arr2D_3:\n");

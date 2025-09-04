@@ -1,4 +1,5 @@
-// Compilación: gcc -o escala_grises escala_grises.c
+// Rota una imagen RGB en 90 grados
+// Compilación: gcc -o rotar90 rotar90.c
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -32,25 +33,46 @@ void escribir_imagen(const char* nb, int f, int c, unsigned char R[f][c], unsign
 
 int main() {
 
-  printf("##########################################################\n");
-  printf("### Calcular promedio de 3 matrices (escala de grises) ###\n");
-  printf("##########################################################\n\n");
+  printf("#########################################\n");
+  printf("### Rotar una imagen RGB en 90 grados ###\n");
+  printf("#########################################\n\n");
 
-  unsigned char Nula[322][256]={};
+  unsigned char rotada_R[256][322] = {};
+  unsigned char rotada_G[256][322] = {};
+  unsigned char rotada_B[256][322] = {};
+  
   // Generamos la imagen PNG dada por las matrices s_R, s_G y s_B
   escribir_imagen("small_mario.png", 322, 256, s_R, s_G, s_B);
 
-  // Cálculo del promedio de 3 matrices
-  unsigned char prom[322][256];
+  // Trasponemos la matriz
   for(int i=0; i < 322; i++) { // Filas
     for(int j=0; j < 256; j++) { // Columnas
-      prom[i][j] = (s_R[i][j]+s_G[i][j]+s_B[i][j]) / 3;
+      rotada_R[j][i] = s_R[i][j];
+      rotada_G[j][i] = s_G[i][j];
+      rotada_B[j][i] = s_B[i][j];
+    }
+  }      
+
+  // Reflejamos las columnas
+  for(int i=0; i < 322/2; i++) { // Columnas
+    for(int j=0; j < 256; j++) { // Filas
+      // Intercambiamos celdas
+      unsigned char tmp = rotada_R[j][i];
+      rotada_R[j][i] = rotada_R[j][322-i-1];
+      rotada_R[j][322-i-1] = tmp;
+
+      tmp = rotada_G[j][i];
+      rotada_G[j][i] = rotada_G[j][322-i-1];
+      rotada_G[j][322-i-1] = tmp;
+
+      tmp = rotada_B[j][i];
+      rotada_B[j][i] = rotada_B[j][322-i-1];
+      rotada_B[j][322-i-1] = tmp;
     }
   }
 
-  // Generamos la imagen PNG dada por las matrices s_R, s_G y s_B
-  escribir_imagen("small_mario_gris.png", 322, 256, prom, prom, prom);
-  //  escribir_imagen("small_mario_gris.png", 322, 256, s_R, s_R, s_R);
+  // Generamos la imagen PNG dada por las matrices rotadas
+  escribir_imagen("small_mario_rotado.png", 256, 322, rotada_R, rotada_G, rotada_B);
   
   return 0;
 }
