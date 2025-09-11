@@ -16,7 +16,10 @@ Cada laboratorio incluye:
   Ciclos _while_ , _for_ y arreglos.
   
 - **Laboratorio 3**
-  Matrices y Biblioteca math.
+  Matrices y Biblioteca _math_.
+
+- **Laboratorio 4**
+  Strings y Biblioteca _string_, _stdlib_ y _ctype_.
 
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
