@@ -15,7 +15,8 @@ Colección de archivos PDF utilizados como material de apoyo para las
 clases. Cada archivo contiene referencias a los programas disponibles en la
 carpeta `Código`.
 
---- 
+### Laboratorios
+Colección de archivos PDF correspondientes a los laboratorios del curso, contienen ejercicios con sus respectivas soluciones, además de información acerca de la sintaxis del lenguaje C.
 
 #### Contacto
 Para cualquier consulta sobre los materiales utilizados, errores en los códigos o propuestas de mejoras, escribir a `jfuentess@inf.udec.cl`.
