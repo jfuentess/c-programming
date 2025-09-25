@@ -20,6 +20,9 @@ Cada laboratorio incluye:
 
 - **Laboratorio 4**
   Strings y Biblioteca _string_, _stdlib_ y _ctype_.
+  
+- **Laboratorio 5**
+  Entradas y Salidas
 
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
