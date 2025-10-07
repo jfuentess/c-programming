@@ -27,6 +27,9 @@ Cada laboratorio incluye:
 - **Laboratorio 6**
   Debugging (gdb)
 
+- **Laboratorio 7**
+  Operaciones a nivel de Bits
+
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
 ---
