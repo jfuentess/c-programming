@@ -29,6 +29,9 @@ Cada laboratorio incluye:
 
 - **Laboratorio 7**
   Operaciones a nivel de Bits
+  
+- **Laboratorio 8**
+  Punteros
 
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
