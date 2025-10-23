@@ -33,6 +33,9 @@ Cada laboratorio incluye:
 - **Laboratorio 8**
   Punteros
 
+- **Laboratorio 8**
+  Memoria dinámica
+
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
 ---
