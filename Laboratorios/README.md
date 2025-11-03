@@ -33,9 +33,12 @@ Cada laboratorio incluye:
 - **Laboratorio 8**
   Punteros
 
-- **Laboratorio 8**
+- **Laboratorio 9**
   Memoria dinámica
-
+  
+- **Laboratorio 10**
+  SDL
+  
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
 ---
