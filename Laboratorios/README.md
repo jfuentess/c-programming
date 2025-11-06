@@ -22,22 +22,25 @@ Cada laboratorio incluye:
   Strings y Biblioteca _string_, _stdlib_ y _ctype_.
 
 - **Laboratorio 5**
-  Entradas y Salidas
+  Entradas y Salidas.
 
 - **Laboratorio 6**
-  Debugging (gdb)
+  Debugging (gdb).
 
 - **Laboratorio 7**
-  Operaciones a nivel de Bits
+  Operaciones a nivel de Bits.
   
 - **Laboratorio 8**
-  Punteros
+  Punteros.
 
 - **Laboratorio 9**
-  Memoria dinámica
+  Memoria dinámica.
   
 - **Laboratorio 10**
   SDL
+
+- **Laboratorio 11**
+  Funciones y recursividad.
   
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
