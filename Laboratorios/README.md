@@ -42,6 +42,9 @@ Cada laboratorio incluye:
 - **Laboratorio 11**
   Funciones y recursividad.
   
+- **Laboratorio 12**
+  Structs
+  
 *(Se irán agregando más laboratorios a medida que avance el curso)*
 
 ---
