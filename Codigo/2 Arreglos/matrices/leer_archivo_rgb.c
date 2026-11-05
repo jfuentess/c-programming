@@ -75,7 +75,48 @@ int main(int argc, char** argv) {
   fclose(fp);
 
   escribir_imagen("nueva_salida.png", filas, cols, img_R, img_G, img_B);
+
+
+  // Reservar espacio
+  unsigned char **img_R_d = malloc(filas*sizeof(unsigned char *));
+  for(int i=0; i < filas; i++) {
+    img_R_d[i] = malloc(cols*sizeof(unsigned char));
+  }
+
+  // Desplazar
+  int d = 10;
+  for(int i=0; i < filas; i++) {// filas
+    for(int j=0; j < cols-d; j++) {// columnas
+      img_R_d[i][j+d] = img_R[i][j]; // Rojo
+    }
+  }
+
+
+  escribir_imagen("nueva_salida_d.png", filas, cols, img_R_d, img_G, img_B);
   
+
+  ///////////////////////////
+
+  unsigned char **img_R_t = malloc(cols*sizeof(unsigned char *));
+  unsigned char **img_G_t = malloc(cols*sizeof(unsigned char *));
+  unsigned char **img_B_t = malloc(cols*sizeof(unsigned char *));
+  
+  for(int i=0; i < cols; i++) {
+    img_R_t[i] = malloc(filas*sizeof(unsigned char));
+    img_G_t[i] = malloc(filas*sizeof(unsigned char));
+    img_B_t[i] = malloc(filas*sizeof(unsigned char));
+  }
+
+  for(int i=0; i < filas; i++) {// filas
+    for(int j=0; j < cols; j++) {// columnas
+      img_R_t[j][i] = img_R[i][j]; // Rojo
+      img_G_t[j][i] = img_G[i][j]; // Verde
+      img_B_t[j][i] = img_B[i][j]; // Azul
+    }
+  }
+  escribir_imagen("nueva_salida_t.png", cols, filas, img_R_t, img_G_t, img_B_t);
+  
+
   return 0;
 
 }

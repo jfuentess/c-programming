@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
   printf("###############################\n\n");
 
   if(argc != 4) {
-    printf("Uso: %s <archivo 1> <archivo 3> <archivo 3>\n", argv[0]);
+    printf("Uso: %s <archivo 1> <archivo 2> <archivo 3>\n", argv[0]);
     exit(0);
   }
 

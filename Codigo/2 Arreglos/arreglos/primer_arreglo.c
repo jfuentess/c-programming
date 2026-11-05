@@ -16,7 +16,7 @@ int main() {
   int arr1[10]; // No hay garantía del valor de cada variable del arreglo
   int arr2[10] = {0}; // Todos los elementos son inicializados en 0
   int arr3[10] = {5};
-  int arr4[10] = {5, 7, 10, 56, 0, 45, 7, 12, -1, -10};
+  /* int arr4[10] = {5, 7, 10, 56, 0, 45, 7, 12, -1, -10}; */
 
   /* printf("1. %d\n", arr4[0]); */
   /* printf("2. %d\n", arr4[1]); */
@@ -33,6 +33,17 @@ int main() {
   printf("arr1: ");
   for(int i=0; i < 10; i++)
     printf("%d ", arr1[i]);
+  printf("\n");
+
+
+  printf("arr2: ");
+  for(int i=0; i < 10; i++)
+    printf("%d ", arr2[i]);
+  printf("\n");
+
+    printf("arr3: ");
+  for(int i=0; i < 10; i++)
+    printf("%d ", arr3[i]);
   printf("\n");
 
   return 0;

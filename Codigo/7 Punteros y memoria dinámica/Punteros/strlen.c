@@ -5,6 +5,8 @@
 int strlen_local(char *t) {
   int largo = 0;
 
+  printf("Puntero t: %p\n", t);
+
   while(*t != '\0') {
     largo++;
     t++;
@@ -22,6 +24,6 @@ int main() {
   int l = strlen_local(texto);
 
   printf("El largo del texto ingresado es %d\n", l);
-  
+
   return 1;
 }

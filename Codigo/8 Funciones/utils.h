@@ -19,3 +19,6 @@ int min_el(int *arr, int n);
 
 // Intercambia el contenido de las variables pasadas por parámetro
 void swap(int *a, int *b);
+
+// Función de ordenamiento basada en selection sort
+void ssort(int *arr, int inicio, int n);

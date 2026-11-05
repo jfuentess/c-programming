@@ -9,17 +9,23 @@
 
 int main(int argc, char** argv) {
 
+  fprintf(stderr, "[STATUS] Iniciando ...\n");
   printf("################################################\n");
   printf("### Leer números mágicos de algunos archivos ###\n");
   printf("################################################\n\n");
 
+  char nombre_archivo[100];
+  scanf("%s", nombre_archivo);
+
+  fprintf(stderr, "[STATUS] Abriendo archivo ...\n");
   // Abrimos el stream para leer el archivo CSV
-  FILE *fp  = fopen(argv[1],"r");
+  FILE *fp  = fopen(nombre_archivo,"r");
 
   // Declaramos un buffer para leer los primeros 8 bytes del archivo de entrada
   // (añadimos un byte adicional para el final de string '\0')
   unsigned char magic_number[9];
 
+  fprintf(stderr, "[STATUS] Leyendo númeor mágico ...\n");
   // Leemos los primeros 8 bytes
   if(fgets(magic_number, 9, fp)) {   
 
@@ -31,7 +37,9 @@ int main(int argc, char** argv) {
     printf("\n");
 
   }
-  
+
+  fprintf(stderr, "[STATUS] Cerrando ...\n");
+
   return 0;
 
   /*********************************************************************/

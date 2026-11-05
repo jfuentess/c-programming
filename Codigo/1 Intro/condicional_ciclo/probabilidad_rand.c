@@ -29,10 +29,9 @@ void main(int argc, char** argv) {
   int limite = atoi(argv[1]);
 
   srand(time(0)); // Semilla de la función rand() 
-  
   for(i=0; i<iteraciones; i++) {
     int val = rand() % 100;
-  
+    printf("%d\n", val);
     if(val < limite)
       contador++;
   }

@@ -42,7 +42,7 @@ int main() {
 
   for(int i=0; i < 5; i++) {
     int2bits(x);
-    x <<= 1;
+    x <<= 1; // x = x << 1
     printf("\n");
   }
 
@@ -68,5 +68,11 @@ int main() {
   printf("Operador XOR (^)\n");
   int2bits(y ^ z);
 
+
+  int p = (1 << 23) - 1;
+  int2bits(p);
+  int2bits(p - (1 << 10));
+  int2bits(1 << 10);
+  int2bits(p ^ (1 << 10));
   return 0;
 }

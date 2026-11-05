@@ -17,7 +17,7 @@ int main() {
 
   // Inicializaremos el arreglo con valores al azar en el rango [0,99]
   for(int i=0; i < n; i++) {
-    arr[i] = rand() % 100;
+    arr[i] = rand() % 1000;
   }
 
   for(int i=0; i < n; i++) {

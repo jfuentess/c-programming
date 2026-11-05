@@ -11,7 +11,7 @@ int main(void) {
   char texto[104] = "El Premio Turing es un premio de las Ciencias de la Computacion que es otorgado anualmente por la ACM. ";
 
   char *palabra;
-  char *delimitador = " ";
+  char *delimitador = "e";
   int cnt = 0;
   
   palabra = strtok(texto, delimitador); // Primera palabra

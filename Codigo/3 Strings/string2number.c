@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
   printf("n: %d\n", n);
   
   char t1[] = "102 veces";
+  //char t1[] = "102";
   char t2[] = "10.2";
 
   int n1 = atoi(t1); // Caracteres a enteros

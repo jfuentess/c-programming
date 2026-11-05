@@ -10,7 +10,8 @@ int main () {
   printf("######################\n\n");
   
    /* Reserva inicial de memoria */
-   x = (int *) calloc(15, sizeof(int));
+  //x = (int *) calloc(15, sizeof(int));
+  x = (int *) malloc(15* sizeof(int));
 
    printf("x(%p): ", x);
    for(int i=0; i < 15; i++)

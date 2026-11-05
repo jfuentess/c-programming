@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <limits.h> /* Limites de enteros y caracteres */
 #include <float.h> /* Limites de números decimales */
 
 void main() {
-
+  
     printf("char:\t\t[%d, %d] \n", SCHAR_MIN, SCHAR_MAX);
     printf("unsigned char:\t[0, %u] \n", UCHAR_MAX);
     
@@ -13,7 +13,7 @@ void main() {
     
     printf("int:\t\t[%d, %d] \n", INT_MIN, INT_MAX);
     printf("unsigned (int):\t[0, %u] \n", UINT_MAX);
-
+  
     printf("long:\t\t[%li, %li] \n", LONG_MIN, LONG_MAX);
     printf("unsigned long:\t[0, %lu] \n", ULONG_MAX);
 

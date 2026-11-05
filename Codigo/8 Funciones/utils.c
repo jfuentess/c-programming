@@ -53,3 +53,15 @@ void swap(int *a, int *b) {
   *a = *b;
   *b = aux;
 }
+
+void ssort(int *arr, int inicio, int n) {
+  for(int i=inicio; i < n; i++) {
+    int min_id = min_pos_range(arr, i, n);
+    // Opción 1 para swap
+    swap(&arr[i], &arr[min_id]);
+
+    /* // Opción 2 para swap
+       swap(arr + i, arr + min_id); */
+  }
+
+}

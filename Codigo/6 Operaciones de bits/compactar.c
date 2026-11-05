@@ -31,7 +31,7 @@ int main() {
   printf("Se necesitan %d bits para representar todos los elementos\n", n_bits);
 
   // Usaremos los 32 bits de esta variable para almacenar 8 enteros entre 0 y 15
-  unsigned int compacto;
+  unsigned int compacto = 0;
 
   for(int i=0, d=0; i < n; i++, d+=n_bits) {
     compacto = compacto | (arr[i] << d);

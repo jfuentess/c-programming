@@ -11,14 +11,9 @@ int main() {
   fill_array(arr, n, 10, 30);
 
   print_array(arr, n);
-  for(int i=0; i < n; i++) {
-    int min_id = min_pos_range(arr, i, n);
-    // Opción 1 para swap
-    swap(&arr[i], &arr[min_id]);
 
-    /* // Opción 2 para swap
-       swap(arr + i, arr + min_id); */
-  }
+  ssort(arr, 10, 15);
+  
   print_array(arr, n);
 
   return EXIT_SUCCESS;

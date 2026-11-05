@@ -15,7 +15,7 @@
 
 void main() {
   // Temperatura en Celsius
-  float c = 10;
+  float c = 25;
 
   // Temperatura en Kelvin
   float k = c + KV;

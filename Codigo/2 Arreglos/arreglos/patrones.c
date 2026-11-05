@@ -13,22 +13,22 @@ int main(int argc, char **argv) {
   printf("############################\n\n");
 
   
-  char texto[170] = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho que vivia un hidalgo de los de lanza en astillero, adarga antigua, rocin flaco y galgo corredor.";
+  char texto[170] = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho que vivia un hidalgo dedede de lanza en astillero, adarga antigua, rocin flaco y galgo corredor.";
 
-  char patron[8] = "de lanza";
+  char patron[8] = "ede";
 
   int cont = 0;
   for(int i=0; i < 163; i++) { // Texto
     cont = 0;
     // Comparamos las 8 letras del patrón
-    for(int j = 0; j < 8; j++) {
+    for(int j = 0; j < 3; j++) {
       if(texto[i+j] == patron[j]) {
 	cont++;
       }
     }
     // Si encontramos 8 coincidencias, entonces concluimos que el patrón fue
     // encontrado
-    if(cont == 8)
+    if(cont == 3)
       printf("Encontrado!!! (posición: %d)\n", i);
   }
 

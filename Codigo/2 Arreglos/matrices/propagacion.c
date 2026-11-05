@@ -47,9 +47,12 @@ int main() {
   // Imagen mayoritariamente verde
   for(int i=0; i < 322; i++) { // Filas
     for(int j=0; j < 256; j++) { // Columnas
-      rand_R[i][j] = rand() % 25; // 0-24
-      rand_G[i][j] = rand() % 150; // 0-149
-      rand_B[i][j] = rand() % 25; // 0-24
+      rand_R[i][j] = 250;
+      rand_G[i][j] = 250;
+      rand_B[i][j] = 250;
+      /* rand_R[i][j] = 100 + (rand() % 150); // 0-24 */
+      /* rand_G[i][j] = 100 + (rand() % 150); // 0-149 */
+      /* rand_B[i][j] = 100 + (rand() % 150); // 0-24 */
     }
   }
 
@@ -108,50 +111,49 @@ int main() {
   unsigned char copy_G[322][256];
   unsigned char copy_B[322][256];
   
-
   while(1) {
     for(int i=0; i<322; i++) { // Filas
       for(int j=0; j<256; j++) { // Columnas
-	unsigned char max_R = 0;
-	unsigned char max_G = 0;
-	unsigned char max_B = 0;
-	
+	unsigned char sum_R = 0; // Suma acumulada de vecinos rojos
+	unsigned char sum_G = 0;
+	unsigned char sum_B = 0;
+	unsigned char vecinos = 0;
 	// Vecino de arriba
 	if(i-1 >= 0) {
-	  if(max_R < rand_R[i-1][j]) max_R = rand_R[i-1][j]; 
-	  if(max_G < rand_G[i-1][j]) max_G = rand_G[i-1][j]; 
-	  if(max_B < rand_B[i-1][j]) max_B = rand_B[i-1][j]; 
+	  sum_R += rand_R[i-1][j];
+	  sum_G += rand_G[i-1][j];
+	  sum_B += rand_B[i-1][j];
+	  vecinos++;
 	}
 	// Vecino de abajo
 	if(i+1 < 322) {
-	  if(max_R < rand_R[i+1][j]) max_R = rand_R[i+1][j]; 
-	  if(max_G < rand_G[i+1][j]) max_G = rand_G[i+1][j]; 
-	  if(max_B < rand_B[i+1][j]) max_B = rand_B[i+1][j]; 
+	  sum_R += rand_R[i+1][j];
+	  sum_G += rand_G[i+1][j];
+	  sum_B += rand_B[i+1][j];
+	  vecinos++;
 	}
       
 	// Vecino de la izquierda
 	if(j-1 >= 0) {
-	  if(max_R < rand_R[i][j-1]) max_R = rand_R[i][j-1]; 
-	  if(max_G < rand_G[i][j-1]) max_G = rand_G[i][j-1]; 
-	  if(max_B < rand_B[i][j-1]) max_B = rand_B[i][j-1]; 
+	  sum_R += rand_R[i][j-1];
+	  sum_G += rand_G[i][j-1];
+	  sum_B += rand_B[i][j-1];
+	  vecinos++;
 	}
 
 	// Vecino de la derecha
 	if(j+1 < 256) {
-	  if(max_R < rand_R[i][j+1]) max_R = rand_R[i][j+1]; 
-	  if(max_G < rand_G[i][j+1]) max_G = rand_G[i][j+1]; 
-	  if(max_B < rand_B[i][j+1]) max_B = rand_B[i][j+1]; 
+	  sum_R += rand_R[i][j+1];
+	  sum_G += rand_G[i][j+1];
+	  sum_B += rand_B[i][j+1];
+	  vecinos++;
 	}
 
-      
-	if(rand_R[i][j] < max_R) copy_R[i][j] = max_R;
-	else copy_R[i][j] = rand_R[i][j];
 
-	if(rand_G[i][j] < max_G) copy_G[i][j] = max_G;
-	else copy_G[i][j] = rand_G[i][j];
-
-	if(rand_B[i][j] < max_B) copy_B[i][j] = max_B;
-	else copy_B[i][j] = rand_B[i][j];
+	
+	copy_R[i][j] = sum_R / vecinos;
+	copy_G[i][j] = sum_G / vecinos;
+	copy_B[i][j] = sum_B / vecinos;
 
       }
     }
@@ -159,8 +161,8 @@ int main() {
     for(int i=0; i<322; i++) { // Filas
       for(int j=0; j<256; j++) { // Columnas
 	rand_R[i][j] = copy_R[i][j];
-	//	rand_G[i][j] = copy_G[i][j];
-	//	rand_B[i][j] = copy_B[i][j];
+	rand_G[i][j] = copy_G[i][j];
+	rand_B[i][j] = copy_B[i][j];
       }
     }
 
@@ -169,6 +171,67 @@ int main() {
 
     sleep(1); // Detiene la ejecución 1 segundo
   }
+
+  /* while(1) { */
+  /*   for(int i=0; i<322; i++) { // Filas */
+  /*     for(int j=0; j<256; j++) { // Columnas */
+  /* 	unsigned char max_R = 0; */
+  /* 	unsigned char max_G = 0; */
+  /* 	unsigned char max_B = 0; */
+	
+  /* 	// Vecino de arriba */
+  /* 	if(i-1 >= 0) { */
+  /* 	  if(max_R < rand_R[i-1][j]) max_R = rand_R[i-1][j];  */
+  /* 	  if(max_G < rand_G[i-1][j]) max_G = rand_G[i-1][j];  */
+  /* 	  if(max_B < rand_B[i-1][j]) max_B = rand_B[i-1][j];  */
+  /* 	} */
+  /* 	// Vecino de abajo */
+  /* 	if(i+1 < 322) { */
+  /* 	  if(max_R < rand_R[i+1][j]) max_R = rand_R[i+1][j];  */
+  /* 	  if(max_G < rand_G[i+1][j]) max_G = rand_G[i+1][j];  */
+  /* 	  if(max_B < rand_B[i+1][j]) max_B = rand_B[i+1][j];  */
+  /* 	} */
+      
+  /* 	// Vecino de la izquierda */
+  /* 	if(j-1 >= 0) { */
+  /* 	  if(max_R < rand_R[i][j-1]) max_R = rand_R[i][j-1];  */
+  /* 	  if(max_G < rand_G[i][j-1]) max_G = rand_G[i][j-1];  */
+  /* 	  if(max_B < rand_B[i][j-1]) max_B = rand_B[i][j-1];  */
+  /* 	} */
+
+  /* 	// Vecino de la derecha */
+  /* 	if(j+1 < 256) { */
+  /* 	  if(max_R < rand_R[i][j+1]) max_R = rand_R[i][j+1];  */
+  /* 	  if(max_G < rand_G[i][j+1]) max_G = rand_G[i][j+1];  */
+  /* 	  if(max_B < rand_B[i][j+1]) max_B = rand_B[i][j+1];  */
+  /* 	} */
+
+      
+  /* 	if(rand_R[i][j] < max_R) copy_R[i][j] = max_R; */
+  /* 	else copy_R[i][j] = rand_R[i][j]; */
+
+  /* 	if(rand_G[i][j] < max_G) copy_G[i][j] = max_G; */
+  /* 	else copy_G[i][j] = rand_G[i][j]; */
+
+  /* 	if(rand_B[i][j] < max_B) copy_B[i][j] = max_B; */
+  /* 	else copy_B[i][j] = rand_B[i][j]; */
+
+  /*     } */
+  /*   } */
+
+  /*   for(int i=0; i<322; i++) { // Filas */
+  /*     for(int j=0; j<256; j++) { // Columnas */
+  /* 	rand_R[i][j] = copy_R[i][j]; */
+  /* 	rand_G[i][j] = copy_G[i][j]; */
+  /* 	rand_B[i][j] = copy_B[i][j]; */
+  /*     } */
+  /*   } */
+
+  /*   // Sobre-escribimos la imagen creada inicialmente luego de propagar valores */
+  /*   escribir_imagen("nueva_imagen.png", 322, 256, rand_R, rand_G, rand_B); */
+
+  /*   sleep(1); // Detiene la ejecución 1 segundo */
+  /* } */
   
  
   

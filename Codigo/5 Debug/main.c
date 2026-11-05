@@ -11,7 +11,7 @@
 int main() {
   printf("#########################\n");
   printf("### Suma de cuadrados ###\n");
-  printf("#########################\n\n");
+  printf("#########################\n");
   
   // Variables especiales para medir tiempo de ejecución
   struct timespec stime, etime;

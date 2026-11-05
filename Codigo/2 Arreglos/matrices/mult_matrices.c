@@ -14,13 +14,13 @@ int main(int argc, char** argv) {
   printf("### Multiplicación de matrices ###\n");
   printf("##################################\n\n");
 
-  int matriz1[700][700];
-  int matriz2[700][700];
-  int matriz3[700][700];
+  int matriz1[1500][1500];
+  int matriz2[1500][1500];
+  int matriz3[1500][1500];
 
   // Llenado matrices
-  for(int i = 0; i < 700; ++i)  // Filas
-    for(int j = 0; j < 700; ++j) { // Columnas
+  for(int i = 0; i < 1500; ++i)  // Filas
+    for(int j = 0; j < 1500; ++j) { // Columnas
       matriz1[i][j] = i*10 + j;
       matriz2[i][j] = i + j;
     }
@@ -37,9 +37,9 @@ int main(int argc, char** argv) {
   }
 
   // Multiplicación clásica: Filas de la matriz 1 por columnas de la matriz 2
-  for(int i = 0; i < 700; ++i)
-    for(int j = 0; j < 700; ++j)
-      for(int k = 0; k < 700; ++k) // Elementos dentro de las filas/columnas
+  for(int i = 0; i < 1500; ++i)
+    for(int j = 0; j < 1500; ++j)
+      for(int k = 0; k < 1500; ++k) // Elementos dentro de las filas/columnas
   	matriz3[i][j] += matriz1[i][k] * matriz2[k][j];
 	
   if (clock_gettime(CLOCK_THREAD_CPUTIME_ID , &etime)) {
